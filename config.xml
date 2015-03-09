@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xlmns       = "http://w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.pagemaya.geoalarm"
+        versionCode = "10"
+        version     "1.0.0">
+  <name>GeoAlarm</name>
+
+  <description>
+    A location based alarm
+  </description>
+
+  <author href="http://pagemaya.com" email="mayadrivermd@gmail.com">
+    Maya Driver
+  </author>
+
+  <gap:plugin name="org.apache.cordova.geolocation" />
+
+</widget>
