@@ -14,7 +14,7 @@
     Maya Driver
   </author>
 
-  <gap:plugin name="org.apache.cordova.geolocation" />
+  <feature name="http://api.phonegap.com/1.0/geolocation" />
 
   <access origin="*"/>
 
