@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns       = "http://www.w3.org/ns/widgets"
-        xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.pagemaya.geoalarm"
+<!DOCTYPE note [
+<!ELEMENT note (to,from,heading,body)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+]>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id = "com.pagemaya.geoalarm"
         versionCode = "10"
-        version     "1.0.0">
+        version "1.0.0">
   <name>GeoAlarm</name>
 
   <description>
@@ -14,7 +21,9 @@
     Maya Driver
   </author>
 
-  <feature name="http://api.phonegap.com/1.0/geolocation" />
+  <preference name="permissions" value="none"/>
+
+  <gap:plugin name="org.apache.cordova.geolocation" />
 
   <access origin="*"/>
 
