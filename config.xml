@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id = "com.pagemaya.geoalarm"
+        id = "com.github.geoalarm"
         versionCode = "10"
         version "1.0.0">
   <name>GeoAlarm</name>
@@ -10,7 +10,7 @@
     A location based alarm
   </description>
 
-  <author href="http://pagemaya.com" email="mayadrivermd@gmail.com">
+  <author href="http://github.com" email="mayadrivermd@gmail.com">
     Maya Driver
   </author>
 
