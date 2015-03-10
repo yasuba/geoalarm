@@ -7,8 +7,9 @@ function onDeviceReady() {
         $('.long-view').html(pos.coords.longitude);
     }
 
-    $('#getIt').click(function() {
-        navigator.geolocation.getCurrentPosition(disp);
+    $('#getIt').on('click', function() {
+        // navigator.geolocation.getCurrentPosition(disp);
+        console.log('hello');
     });
 
 }
