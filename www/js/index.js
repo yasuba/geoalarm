@@ -25,6 +25,7 @@ var app = {
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
+
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
@@ -32,8 +33,16 @@ var app = {
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
+
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        disp: function(pos) {
+           $('.lat-view').html(pos.coords.latitude);
+           $('.long-view').html(pos.coords.longitude);
+        }
+        $('#getIt').click(function() {
+            navigator.geolocation.getCurrentPosition(disp);
+        });
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
