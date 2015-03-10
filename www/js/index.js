@@ -52,10 +52,12 @@
 
 document.addEventListener('deviceready', this.onDeviceReady, false);
 
-function disp(pos) {
-    $('.lat-view').html(pos.coords.latitude);
-    $('.long-view').html(pos.coords.longitude);
+function onDeviceReady() {
+    function disp(pos) {
+        $('.lat-view').html(pos.coords.latitude);
+        $('.long-view').html(pos.coords.longitude);
+    }
+    $('#getIt').click(function() {
+        navigator.geolocation.getCurrentPosition(disp);
+    });
 }
-$('#getIt').click(function() {
-    navigator.geolocation.getCurrentPosition(disp);
-});
