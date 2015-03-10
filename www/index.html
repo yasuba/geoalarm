@@ -12,11 +12,11 @@
     <body>
         <div class="app">
             <h1>GeoAlarm</h1>
-            <div id="deviceready" class="blink">
+<!--             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
                 <p id="geolocation">Finding geolocation...</p>
-            </div>
+            </div> -->
 
             <div class="container">
                 <div id="getIt">Get My Coords</div>
@@ -29,17 +29,11 @@
         <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
+<!--         <script type="text/javascript">
             app.initialize();
-        </script>
-         <script type="text/javascript" charset="utf-8">
-             function disp(pos) {
-               $('.lat-view').html(pos.coords.latitude);
-               $('.long-view').html(pos.coords.longitude);
-            }
-             $('#getIt').click(function() {
-                navigator.geolocation.getCurrentPosition(disp);
-            });
+        </script> -->
+         <!-- <script type="text/javascript" charset="utf-8">
+
 
     // Wait for device API libraries to load
     // //
@@ -72,6 +66,6 @@
     //           'message: ' + error.message + '\n');
     // }
 
-    </script>
+    </script> -->
     </body>
 </html>
