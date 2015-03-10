@@ -36,13 +36,6 @@ var app = {
 
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        disp: function(pos) {
-           $('.lat-view').html(pos.coords.latitude);
-           $('.long-view').html(pos.coords.longitude);
-        }
-        $('#getIt').click(function() {
-            navigator.geolocation.getCurrentPosition(disp);
-        });
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

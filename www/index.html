@@ -26,12 +26,20 @@
                 <div class="lat-view ds"></div>
             </div>
         </div>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
          <script type="text/javascript" charset="utf-8">
+             function disp(pos) {
+               $('.lat-view').html(pos.coords.latitude);
+               $('.long-view').html(pos.coords.longitude);
+            }
+             $('#getIt').click(function() {
+                navigator.geolocation.getCurrentPosition(disp);
+            });
 
     // Wait for device API libraries to load
     // //
