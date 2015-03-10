@@ -1,5 +1,5 @@
-# GeoAlarm #
+# Get My Coords
 
-I'm building a location-based alarm app. It's just something I thought up recently and thought I'd have a go at coding a mobile app.
+A small app to display the coordinates of your location.
 
-I'm using PhoneGap.
+Built with PhoneGap Build, utilizes HTML5 geolocation API
