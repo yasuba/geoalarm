@@ -1,9 +1,9 @@
+Locations = new Mongo.Collection("locations");
+
 if (Meteor.isClient) {
 
-  Template.map.events({
-    "submit .locate": function(event) {
-      event.preventDefault();
-      if(navigator.geolocation) {
+  Template.body.rendered = function() {
+    if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
           var pos = new google.maps.LatLng(position.coords.latitude,
                                            position.coords.longitude);
@@ -24,6 +24,18 @@ if (Meteor.isClient) {
       } else {
         alert("This browser does not support geolocation");
       }
+  }
+
+  Template.body.helpers({
+    locations: function(){
+      return Locations.find({});
+    }
+  });
+
+  Template.addLocation.events({
+    "submit #savePlace": function(event) {
+      event.preventDefault();
+      console.log('yo');
     }
   });
 
