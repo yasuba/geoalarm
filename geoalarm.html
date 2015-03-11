@@ -1,0 +1,21 @@
+<head>
+  <title>GeoAlarm</title>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfThcnUh4uNmXRRpArs0S9IoVdtQ-Zu_0">
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>GeoAlarm</h1>
+    </header>
+    {{> map}}
+  </div>
+</body>
+
+<template name="map">
+  <form class="locate">
+    <button>Locate me</button>
+  </form>
+  <div class="row" id="map-canvas"></div>
+</template>
