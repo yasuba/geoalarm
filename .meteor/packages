@@ -8,6 +8,5 @@ meteor-platform
 autopublish
 insecure
 jquery
-mizzao:bootboxjs
 bootstrap
-bootboxjs
+

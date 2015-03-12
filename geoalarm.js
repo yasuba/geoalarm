@@ -33,23 +33,14 @@ if (Meteor.isClient) {
   });
 
   Template.saveLocation.events({
-    "click #addLocation": function(event) {
-      // event.preventDefault();
-      // console.log('yo');
-      bootbox
-        .dialog({
-          title: "New location",
-          message: $('#locationForm'),
-          show: false
-        })
-        .on('shown.bs.modal', function(){
-          $('#locationForm')
-          .show()
-        })
-        .on('hide.bs.modal', function(){
-          $('#locationForm').hide().appendTo('body');
-        })
-        .modal('show');
+    "submit #locationForm": function(event) {
+      event.preventDefault();
+      var location = event.target.locationname.value;
+        Locations.insert({
+          location: location
+        });
+      event.target.locationname.value = "";
+      return false;
     }
   });
 
