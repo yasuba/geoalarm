@@ -1,0 +1,43 @@
+<head>
+  <title>GeoAlarm</title>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfThcnUh4uNmXRRpArs0S9IoVdtQ-Zu_0">
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>GeoAlarm</h1>
+    </header>
+    {{> loginButtons}}
+    <div class="row" id="map-canvas"></div>
+    {{> saveLocation}}
+    <ul id="places">
+      {{#each locations}}
+        {{> location}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <script>
+
+  </script>
+</body>
+
+<template name="saveLocation">
+  {{#if currentUser}}
+    <form id="locationForm" method="post" class="form-horizontal">
+      <div class="place">
+          <input type="text" class="form-control" placeholder="Name this location" name="locationname" />
+      </div>
+
+      <div class="place">
+          <button type="submit" id="locate" class="btn btn-default">Save</button>
+      </div>
+    </form>
+  {{/if}}
+</template>
+
+<template name="location">
+  <a href="#"><li>{{location}}</li></a>
+</template>
