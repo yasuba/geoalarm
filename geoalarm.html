@@ -9,6 +9,7 @@
     <header>
       <h1>GeoAlarm</h1>
     </header>
+    {{> loginButtons}}
     <div class="row" id="map-canvas"></div>
     {{> saveLocation}}
     <ul id="places">
@@ -24,16 +25,17 @@
 </body>
 
 <template name="saveLocation">
-  <form id="locationForm" method="post" class="form-horizontal">
-    <div class="place">
-        <input type="text" class="form-control" placeholder="Name this location" name="locationname" />
-    </div>
+  {{#if currentUser}}
+    <form id="locationForm" method="post" class="form-horizontal">
+      <div class="place">
+          <input type="text" class="form-control" placeholder="Name this location" name="locationname" />
+      </div>
 
-    <div class="place">
-        <button type="submit" id="locate" class="btn btn-default">Save</button>
-    </div>
-  </form>
-
+      <div class="place">
+          <button type="submit" id="locate" class="btn btn-default">Save</button>
+      </div>
+    </form>
+  {{/if}}
 </template>
 
 <template name="location">

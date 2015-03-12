@@ -2,6 +2,8 @@ Locations = new Mongo.Collection("locations");
 
 if (Meteor.isClient) {
 
+  Meteor.subscribe("locations");
+
   Template.body.rendered = function() {
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -36,12 +38,36 @@ if (Meteor.isClient) {
     "submit #locationForm": function(event) {
       event.preventDefault();
       var location = event.target.locationname.value;
-        Locations.insert({
-          location: location
-        });
+      Meteor.call("addPlace", location)
       event.target.locationname.value = "";
       return false;
     }
   });
 
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_ONLY"
+  });
+
+}
+
+Meteor.methods({
+  addPlace: function(location) {
+    if(! Meteor.userId()) {
+      throw new Meteor.Error("not authorised");
+    }
+    Locations.insert({
+      location: location,
+      owner: Meteor.userId(),
+      username: Meteor.user().username
+    });
+  },
+  deletePlace: function(locationId) {
+    Locations.remove(locationId);
+  }
+});
+
+if(Meteor.isServer) {
+  Meteor.publish("locations", function(){
+    return Locations.find();
+  })
 }
