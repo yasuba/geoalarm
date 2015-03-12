@@ -1,0 +1,13 @@
+<template name="saveLocation">
+  {{#if currentUser}}
+    <form id="locationForm" method="post" class="form-horizontal">
+      <div class="place">
+          <input type="text" class="form-control" placeholder="Name this location" name="locationname" />
+      </div>
+
+      <div class="place">
+          <button type="submit" id="locate" class="btn btn-default">Save</button>
+      </div>
+    </form>
+  {{/if}}
+</template>

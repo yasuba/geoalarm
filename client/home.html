@@ -1,0 +1,9 @@
+<template name="home">
+  <div class="row" id="map-canvas"></div>
+  {{> saveLocation}}
+  <ul id="places">
+    {{#each locations}}
+      <a href="/set-alarm/:location"><li>{{location}}</li></a>
+    {{/each}}
+  </ul>
+</template>

@@ -1,0 +1,69 @@
+body {
+  min-height: 800px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  text-align: center;
+  background-color: #54b2a9;
+}
+
+header {
+  padding: 10px 0;
+  background-color: #54b2a9;
+}
+
+h1 {
+  color: #fff;
+}
+
+#locationForm {
+  padding: 30px 0 10px;
+  border: none;
+  width: 100%;
+  font-size: 1em;
+  background-color: #54b2a9;
+  cursor: pointer;
+}
+
+.place {
+  display: inline;
+  margin-top: 10px;
+}
+
+#places {
+  list-style: none;
+  margin: 0;
+}
+
+#places li {
+  padding: 10px 0;
+  border-top: 1px solid #fff;
+  background-color: #83d0c9;
+}
+
+#places li:hover {
+  background-color: #65c3ba;
+}
+
+#places a {
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#map-canvas {
+  width: 100%;
+  height: 300px;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+
+  body {
+    padding: 0;
+  }
+
+}
