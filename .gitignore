@@ -2,3 +2,4 @@
 *.lock
 .meteor/
 packages/
+.DS_Store
