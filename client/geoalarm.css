@@ -24,6 +24,10 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  margin: 0;
+}
+
 #login-buttons{
   float: right;
   margin: -45px 10px 0;
@@ -88,22 +92,34 @@ h2 {
 
 .time {
   display: inline-block;
-  padding: 30px;
+  padding: 10px 30px;
   width: 30px;
 }
 
 .divider {
   display: inline-block;
+  vertical-align: top;
 }
 
 .divider span {
-  margin-top: -50px;
+  line-height: 3em;
+  font-size: 3em;
 }
 
 #alarm p {
-  font-size: 1.5em;
+  font-size: 3em;
   font-weight: bold;
   margin-top: 20px;
+  margin-left: -8px;
+}
+
+.day button {
+  display: inline;
+  margin: 10px 0 50px;
+}
+
+.day button:active {
+  background-color:#83d0c9;
 }
 
 @media (max-width: 767px) {

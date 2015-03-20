@@ -4,18 +4,29 @@
     <div class="row" id="map-canvas"></div>
     <div id="alarm">
       <h3>Set your alarm</h3>
-      <div class="time">
-        <button class="hoursUp">&#9650;</button>
-        <p class="hours">00</p>
-        <button class="hoursDown">&#9660;</button>
-      </div>
-      <div class="divider">
-        <span>:</span>
-      </div>
-      <div class="time">
-        <button>&#9650;</button>
-        <p class="minutes">00</p>
-        <button>&#9660;</button>
-      </div>
+      <form action="post">
+        <div class="time">
+          <button class="hoursUp">&#9650;</button>
+          <p class="hours">00</p>
+          <button class="hoursDown">&#9660;</button>
+        </div>
+        <div class="divider">
+          <span>:</span>
+        </div>
+        <div class="time">
+          <button class="minutesUp">&#9650;</button>
+          <p class="minutes">00</p>
+          <button class="minutesDown">&#9660;</button>
+        </div>
+        <div class="day">
+          <button class="mon">M</button>
+          <button class="tue">T</button>
+          <button class="wed">W</button>
+          <button class="thur">T</button>
+          <button class="fri">F</button>
+          <button class="sat">S</button>
+          <button class="sun">S</button>
+        </div>
+      </form>
     </div>
 </template>
