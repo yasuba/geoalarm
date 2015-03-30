@@ -12,3 +12,5 @@ accounts-ui
 accounts-password
 iron:router
 
+d3
+underscore
