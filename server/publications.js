@@ -5,3 +5,11 @@ Meteor.publish("locations", function(){
 Meteor.publish("circles", function(){
   return Circles.find();
 })
+
+Meteor.publish("messages", function(){
+  return Messages.find();
+})
+
+Meteor.publish("userStatus", function() {
+  return Meteor.users.find({});
+});

@@ -6,9 +6,11 @@
 
 meteor-platform
 jquery
-bootstrap
 iron:router
 d3
 underscore
 accounts-password
 accounts-ui
+streams
+twbs:bootstrap
+mizzao:user-status
