@@ -28,6 +28,15 @@ h3 {
   margin: 0;
 }
 
+h1 a {
+  color: #fff;
+}
+
+h1 a:hover, h1 a:visited, h1 a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
 #login-buttons{
   float: right;
   margin: -45px 10px 0;
@@ -92,7 +101,7 @@ h3 {
 
 .time {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 10px 10px;
   width: 30px;
 }
 
@@ -102,7 +111,7 @@ h3 {
 }
 
 .divider span {
-  line-height: 3em;
+  line-height: 2.7em;
   font-size: 3em;
 }
 
@@ -113,13 +122,50 @@ h3 {
   margin-left: -8px;
 }
 
-.day button {
-  display: inline;
-  margin: 10px 0 50px;
+.timeUnits {
+  width: 30px;
+  font-size: 2em;
+  text-align: center;
 }
 
-.day button:active {
-  background-color:#83d0c9;
+.changeTime {
+  width: 36px;
+}
+
+.day {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.day input[type="checkbox"] {
+  display: none;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+#login-buttons .text-besides-image {
+  margin-left: 0;
 }
 
 @media (max-width: 767px) {

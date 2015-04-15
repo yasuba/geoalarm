@@ -1,0 +1,48 @@
+<template name="setAlarm">
+  <h2>{{location}}</h2>
+<!--     <p>You are at {{fromHelper}}</p> -->
+    <div class="row" id="map-canvas"></div>
+    <div id="alarm">
+      <h3>Set your alarm</h3>
+      <form action="post" id="setNewAlarm">
+        <div class="time">
+          <button class="changeTime" id="hoursUp">&#9650;</button>
+          <input name="hours" id="hours" class="timeUnits" value="0">
+          <button class="changeTime" id="hoursDown">&#9660;</button>
+        </div>
+        <div class="divider">
+          <span>:</span>
+        </div>
+        <div class="time">
+          <button class="changeTime" id="minutesUp">&#9650;</button>
+          <input name="minutes" id="minutes" class="timeUnits" value="0">
+          <button class="changeTime" id="minutesDown">&#9660;</button>
+        </div>
+        <div class="day btn-group" data-toggle="buttons">
+          <!-- <label class="checkLabels btn btn-primary"> -->
+            <input class="days btn btn-primary checkLabels" type="button" id="mon" autocomplete="off" name="days" value="M">
+          <!-- </label> -->
+          <!-- <label class="checkLabels btn btn-primary"> -->
+            <input class="days btn btn-primary checkLabels" type="button" id="tue" autocomplete="off" name="days" value="T">
+          <!-- </label> -->
+          <!-- <label class="checkLabels btn btn-primary"> -->
+            <input class="days btn btn-primary checkLabels" type="button" id="wed" autocomplete="off" name="days" value="W">
+          <!-- </label> -->
+          <!-- <label class="checkLabels btn btn-primary"> -->
+            <input class="days btn btn-primary checkLabels" type="button" id="thu" autocomplete="off" name="days" value="T">
+          <!-- </label> -->
+          <!-- <label class="checkLabels btn btn-primary"> -->
+            <input class="days btn btn-primary checkLabels" type="button" id="fri" autocomplete="off" name="days" value="F">
+          <!-- </label> -->
+          <!-- <label class="checkLabels btn btn-primary"> -->
+            <input class="days btn btn-primary checkLabels" type="button" id="sat" autocomplete="off" name="days" value="S">
+          <!-- </label> -->
+          <!-- <label class="checkLabels btn btn-primary"> -->
+            <input class="days btn btn-primary checkLabels" type="button" id="sun" autocomplete="off" name="days" value="S">
+          <!-- </label> -->
+        </div>
+        <button class="btn btn-primary" id="submit" type="submit">Save alarm</button>
+      </form>
+    </div>
+
+</template>
