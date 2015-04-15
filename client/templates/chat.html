@@ -1,0 +1,25 @@
+<template name="chat">
+  <div id="messages" class="col-md-6 col-md-offset-3">
+  {{#each messages}}
+    {{> chatMessage}}
+  {{/each}}
+  </div>
+  <form id="chatBox" class="col-md-6 col-md-offset-3">
+    <textarea id='chat-message' name="message"></textarea><br>
+    <input type="hidden" name="name" value="{{currentUser}}">
+    <button class='btn btn-primary' id='send'>Send Chat</button>
+  </form>
+
+  <div id="onlineUsers">
+    Online now:
+    {{#each usersOnline}}
+      <button class="privateMessage btn btn-success" name="{{username}}">{{username}}</button>
+    {{/each}}
+  </div>
+</template>
+
+<template name='chatMessage'>
+  <div>
+    <b>{{name}}</b>: {{message}}
+  </div>
+</template>

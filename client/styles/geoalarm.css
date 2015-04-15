@@ -4,7 +4,7 @@ body {
   font-family: sans-serif;
 }
 
-.container {
+.wrapper {
   text-align: center;
   background-color: #54b2a9;
 }
@@ -166,6 +166,27 @@ h1 a:hover, h1 a:visited, h1 a:focus {
 
 #login-buttons .text-besides-image {
   margin-left: 0;
+}
+
+#onlineUsers {
+  padding-bottom: 10px;
+}
+
+#messages {
+  border: 1px solid #cfcfcf;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#chatBox {
+  display: block;
+  padding: 0;
+}
+
+#chat-message {
+  width: 100%;
+  border: 1px solid #cfcfcf;
 }
 
 @media (max-width: 767px) {
