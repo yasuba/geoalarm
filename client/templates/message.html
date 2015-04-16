@@ -1,12 +1,18 @@
 <template name="message">
-  <div id="messages" class="col-md-6 col-md-offset-3">
+  <div class="messages col-md-6 col-md-offset-3">
   {{#each messages}}
-    {{> chatMessage}}
+    {{> privateMessage}}
   {{/each}}
   </div>
-  <form id="chatBox" class="col-md-6 col-md-offset-3">
-    <textarea id='chat-message' name="message"></textarea><br>
+  <form id="messageBox" class="col-md-6 col-md-offset-3">
+    <textarea class='chat-message' name="privateMessage"></textarea><br>
     <input type="hidden" name="name" value="{{currentUser}}">
-    <button class='btn btn-primary' id='send'>Send Chat</button>
+    <button class='btn btn-primary' id='send'>Send Message</button>
   </form>
+</template>
+
+<template name='privateMessage'>
+  <div>
+    <b>{{>timeago time}}</b>: {{message}}
+  </div>
 </template>

@@ -6,6 +6,10 @@ Meteor.publish("circles", function(){
   return Circles.find();
 })
 
+Meteor.publish("chat", function(){
+  return Chat.find();
+})
+
 Meteor.publish("messages", function(){
   return Messages.find();
 })
